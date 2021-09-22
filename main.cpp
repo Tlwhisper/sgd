@@ -1,5 +1,5 @@
 #include "gradient.h"
-vector<float> func(vector<float>& para) {
+vector<float> func(vector<float>& para) {  // 生成数据
 	vector<float> ret;
 	for (float x = 0.f; x < 1.f; x += .1f) {
 		for (float y = 0.f; y < 1.f; y += .1f) {
@@ -26,7 +26,7 @@ int main() {
 	p.push_back(.8f);
 	p.push_back(.2f);
 	p.push_back(.3f);
-	vector<float> s = func(p);
+	vector<float> s = func(p);  // 填充数据
  
 	Grad grad(3, .01f, .0001f, func, true, true, 100, variant, minimize);
 	grad.standard(s);
