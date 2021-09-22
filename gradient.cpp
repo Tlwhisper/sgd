@@ -43,7 +43,7 @@ long Grad::desc() {
 	clock_t t = clock();
  
 	while (1) {
-		if(debug)print();
+		if(debug)print();  // 打印一次的值
 		calOpt = predFunc(tmpPara);
 		tmpLoss = lossFunc(stdOpt, calOpt);
 		if (tmpLoss < minLoss) {
